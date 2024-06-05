@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { Box, Text, ToastProvider } from '@nimbus-ds/components';
-import { ErrorBoundary, connect, iAmReady } from '@tiendanube/nexo';
-import Router from '@/app/Router';
+import { Box, Text } from '@nimbus-ds/components';
+import { connect, iAmReady } from '@tiendanube/nexo';
 
 import nexo from './NexoClient';
-import NexoSyncRoute from './NexoSyncRoute';
-import { DarkModeProvider } from './DarkModeProvider';
 import './I18n';
 
 const App: React.FC = () => {
@@ -38,17 +34,7 @@ const App: React.FC = () => {
     );
 
   return (
-    <ErrorBoundary nexo={nexo}>
-      <DarkModeProvider>
-        <ToastProvider>
-          <BrowserRouter>
-            <NexoSyncRoute>
-              <Router />
-            </NexoSyncRoute>
-          </BrowserRouter>
-        </ToastProvider>
-      </DarkModeProvider>
-    </ErrorBoundary>
+    <Text>aqui</Text>
   );
 };
 
